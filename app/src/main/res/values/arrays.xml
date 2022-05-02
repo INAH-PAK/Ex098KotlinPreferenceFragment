@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--     배열을 따로 모아둘 수 있는 xml -->
+
+    <string-array name="sound">
+        <item>여기에 알람음을 넣어놓는 거</item>
+        <item>툭툭</item>
+        <item>틱틱</item>
+        <item>띠링</item>
+    </string-array>
+
+    <string-array name="favors">
+        <item>여행</item>
+        <item>독서</item>
+        <item>운동</item>
+        <item>커피</item>
+    </string-array>
+
+</resources>

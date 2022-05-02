@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <CheckBoxPreference
+        app:key="message"
+        app:title="소리 알림 받기"
+        app:summary="소리로 알림을 받으려면 체크하기"
+        app:icon="@drawable/ic_baseline_notifications_active_24"/>
+    <SwitchPreferenceCompat
+        app:key="vibration"
+        app:title="진동 알림"
+        app:summary="진동 알림을 받으려면 체크하기 길면 두줄이된당 ~~~~~~~"/>
+    <SwitchPreference
+        app:key="vibration"
+        app:title="진동 알림"
+        app:summary="진동 알림을 받으려면 체크하기 길면 두줄이된당 ~~~~~~~"/>
+    <EditTextPreference
+        app:key="nickname"
+        app:title="닉네임"
+        app:summary="닉네임당 ~~~~~~~"/>
+    <ListPreference
+        android:key="sound"
+        app:title="알림음"
+        app:summary="알림음을 설정하세요"
+        android:entries="@array/sound"
+        android:entryValues="@array/sound"/>
+    <MultiSelectListPreference
+        app:key="favor"
+        app:title="favoriate"
+        app:summary="좋아하는 것들을 골라보세요"
+        android:entries="@array/favors"
+        android:entryValues="@array/favors"/>
+
+    <PreferenceCategory
+        app:title="deduge">
+
+        <SwitchPreferenceCompat
+            app:key="debugging"
+            app:title="USB 디버깅"
+            app:summary="USB가 연결된 경우 디버그 모드 사용"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            app:key="usb_app"
+            app:title="usb로 설치된 앱 확인"
+            app:summary="USB디버그를 통해 설치된 앱목록을 확인합니다."
+            app:dependency="debugging"/>
+
+
+
+    </PreferenceCategory>
+
+
+<!--    계층구조 형태의 PreferenceFragment     -->
+<!--    서브 설정같은 느낌 !   -->
+<!--    app:fragment="패키지명.붙이고 싶은 Fragment class 이름"-->
+<Preference
+    app:fragment="com.wookie_soft.ex098kotlinpreferencefragment.SettingSubNetworkFragment"
+    app:key="network"
+    app:title="네트워크 설정"
+    app:summary="네트워크를 설정합니다">
+</Preference>
+
+
+<!--    세부 화면이 새로운 엑티비티에 띄우고 싶을때 -->
+<!--    커스텀 설정화면 ~   -->
+<PreferenceScreen app:title="이미지 보기">
+    <intent android:targetPackage="com.wookie_soft.ex098kotlinpreferencefragment"
+            android:targetClass="com.wookie_soft.ex098kotlinpreferencefragment.ImageActivity"/>
+
+
+</PreferenceScreen>
+
+
+</PreferenceScreen>

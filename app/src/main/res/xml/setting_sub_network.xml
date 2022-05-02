@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <SwitchPreferenceCompat
+        app:key="roaming"
+        app:title="데이터 로밍"
+        android:summaryOn="데이터 로밍 활성화 중입니다. 과금 부가에 유의하세요"
+        android:summaryOff="데이터 호밍을 켭니다."/>
+
+</PreferenceScreen>
